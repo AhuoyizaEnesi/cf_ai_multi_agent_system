@@ -25,4 +25,4 @@ binding = "AI"
 
 [[migrations]]
 tag = "v1"
-new_classes = ["CoordinatorDO"]
+new_sqlite_classes = ["CoordinatorDO"]

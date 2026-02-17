@@ -38,7 +38,7 @@ function App() {
   const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const currentAgentsRef = useRef<string[]>([]);
 
-  const WORKER_URL = 'http://localhost:8787';
+  const WORKER_URL = 'https://multi-agent-system.penesi.workers.dev';
 
   useEffect(() => {
     initializeConversation();
@@ -89,7 +89,8 @@ function App() {
   };
 
   const connectWebSocket = (doId: string) => {
-    const ws = new WebSocket(`ws://localhost:8787/api/ws?doId=${doId}`);
+    const wsUrl = WORKER_URL.replace('https://', 'wss://').replace('http://', 'ws://');
+    const ws = new WebSocket(`${wsUrl}/api/ws?doId=${doId}`);
     ws.onopen = () => setIsConnected(true);
     ws.onmessage = (event) => handleStreamChunk(JSON.parse(event.data));
     ws.onclose = () => setIsConnected(false);

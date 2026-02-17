@@ -157,3 +157,7 @@ cf_ai_multi_agent_system/
 - **Real-time Streaming**: WebSocket connection to Durable Object enables token-by-token response streaming
 - **Task Decomposition**: Intelligent routing detects query intent and activates appropriate specialist agents
 - **Edge-Native**: Entire stack runs on Cloudflare's global edge network with zero cold starts
+
+## Deployed Application
+- **Frontend**: https://multi-agent-frontend.pages.dev
+- **API**: https://multi-agent-system.YOUR_SUBDOMAIN.workers.dev
