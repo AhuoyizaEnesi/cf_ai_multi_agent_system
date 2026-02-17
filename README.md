@@ -160,4 +160,4 @@ cf_ai_multi_agent_system/
 
 ## Deployed Application
 - **Frontend**: https://multi-agent-frontend.pages.dev
-- **API**: https://multi-agent-system.YOUR_SUBDOMAIN.workers.dev
+- **API**: https://multi-agent-system.penesi.workers.dev
