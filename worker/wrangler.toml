@@ -1,0 +1,28 @@
+name = "multi-agent-system"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[durable_objects.bindings]]
+name = "COORDINATOR"
+class_name = "CoordinatorDO"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "multi-agent-db"
+database_id = "a143ebda-2856-4988-a954-65288b32f6da"
+
+[[kv_namespaces]]
+binding = "CACHE"
+id = "61d29c1f96054eaebfffe31e193c2e1c"
+
+[[vectorize]]
+binding = "VECTORIZE"
+index_name = "conversation-index"
+remote = true
+
+[ai]
+binding = "AI"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["CoordinatorDO"]
